@@ -28,8 +28,7 @@ jobs:
       run: echo "Building app"
 
     
-test:
-    build:
+  test:
 
     runs-on: ubuntu-latest
 
