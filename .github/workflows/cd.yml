@@ -1,0 +1,28 @@
+
+name: Deployment pipeline
+
+#event on which you want this pipeline to be triggered
+on:
+  push:
+    branches: [ "main" ]
+  #pull_request:
+    #branches: [ "main" ]
+ # jobs are a collection of steps that will be executed as part of the workflow
+jobs:
+  deploy:
+
+    #runs-on: ubuntu-latest
+
+    
+    steps:
+    #switch branch
+    - uses: actions/checkout@v4
+    
+    - name: Build Docker Image
+      run: docker build -t drishtisehgal56/youtube-backend .
+
+    - name: Log in to Docker Hub
+      run: echo ${{ secrets.YTB_DOCKER_PASS }}" | docker login -u "${{ secrets.YT_DOCKER_USERNAME }} --password-stdin
+
+    - name: Login Successful
+      run: echo "Logged in to Docker Hub successfully"

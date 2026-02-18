@@ -33,7 +33,7 @@ app.use("/api/channel", channelRouter)
 app.use("/api/video", videoRouter)
 
 app.listen(4000, () => {
-    console.log("server is running on port 4000")
+    console.log("server is running on port: 4000")
 })
 
 //.  http://localhost:4000/api/create-user
