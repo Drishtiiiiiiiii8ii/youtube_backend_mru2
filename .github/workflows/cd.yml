@@ -5,7 +5,7 @@ name: CD Pipeline
 # event on which you want this pipeline to be triggered
 on:
   push:
-    branches: [ "main", "test"]
+    branches: [ "main",]
 #   pull_request:
 #     branches: [ "main" ]
 
@@ -38,3 +38,4 @@ jobs:
 
     - name: Login Successful'
       run: echo "Logged in to Docker Hub successfully"
+      
