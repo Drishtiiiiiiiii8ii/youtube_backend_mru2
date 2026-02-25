@@ -32,7 +32,6 @@ jobs:
     #     # actual command
     - name : Build Docker Image
       run: docker build -t drishtisehgal56/youtube-backend .
-    - name:
 # docker hub - 2367te346tr3t2ewyquert7yer
     - name: Docker Login
       run: echo "${{ secrets.YTB_DOCKER_PASS }}" | docker login -u "${{ secrets.YT_DOCKER_USERNAME }}" --password-stdin
