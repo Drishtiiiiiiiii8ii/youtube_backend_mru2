@@ -5,7 +5,7 @@ name: CD Pipeline
 # event on which you want this pipeline to be triggered
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "test"]
 #   pull_request:
 #     branches: [ "main" ]
 
