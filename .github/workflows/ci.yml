@@ -19,7 +19,7 @@ jobs:
     # versions you want to test your app on
     strategy:
       matrix:
-        node-version: [20.x, 22.x, 24.x]
+        node-version: [20.x, 22.x,24.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -33,7 +33,6 @@ jobs:
         # actual commands
     - name : Build Command
       run: echo "Building APP" 
-
 
   test:
 
